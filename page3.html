@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<title>Natural Bridge Site Map</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-blue-gray w3-wide w3-padding w3-card">
+      <a href="index.html" " class="w3-bar-item w3-button"><b>Natural Bridge</b> at Red River Gorge</a>
+      <!-- Float links to the right. -->
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Begin page content -->
+<div class="ww3-container w3-padding-32" style="max-width:1256px">
+    
+    <!-- Begin page content -->
+<div class="ww3-container w3-padding-32" style="max-width:1256px">
+    
+  <head>
+    <meta charset='utf-8' />
+    <title>Display a map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+  
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+  
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  
+  <body>
+  
+    <div id='map'></div>
+  
+    <script>
+      // 💡💡💡 Change this to your Token --------------------
+      // ------------------------------------------------
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZ21hZGQ4OSIsImEiOiJja29tOHdwcW4wMG5kMnFwZHpzNHN5ZXMzIn0.bXRnWOEY8ntKDeK-qWdCtw';
+      // ------------------------------------------------
+      // ------------------------------------------------
+  
+      var map = new mapboxgl.Map({
+        container: 'map',
+  
+        // 💡💡💡 Change this to your style --------------------
+        // ------------------------------------------------
+        style: 'mapbox://styles/gmadd89/ckord1elo3jvu18pq45592cyr',
+        // ----------------------------------------------
+        // ------------------------------------------------
+  
+        // 💡💡💡 Change to your location ----------------------
+        // ------------------------------------------------
+        // zoom: 15.65,
+        // center: [-83.6843577, 37.772584],
+        // pitch: 85,
+        // bearing: 80
+        // ------------------------------------------------
+        // ----------------------------------------------
+  
+      });
+  
+      // Add geolocate control to the map.
+      map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+        },
+        trackUserLocation: true
+      }));
+    </script>
+  
+  </body>
+  
+  </html>
